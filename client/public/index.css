@@ -1,0 +1,519 @@
+*{
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.theme1 {
+	--background: #e9d0a6;
+	--pop_up_background: #ffd685;
+	--text_color: #753F27;
+	--hover: #bd6b00;
+	--tasks_background: #c2975798;
+	--shadow: #101010;
+	--input_background:#D9D9D9;
+	--check: #753F27;
+	--ring_back: #d49e13;
+	--ring: #753F27;
+}
+
+.theme2 {
+	--background: #070f36;
+	--pop_up_background: #325cb0;
+	--text_color: #fbfaeb;
+	--hover: #a2b7ca;
+	--tasks_background: #2816cdc1;
+	--shadow: #101010;
+	--input_background:#D9D9D9;
+	--check: #070f36;
+	--ring_back: #6181f6;
+	--ring: #4846c3
+	;
+}
+
+body {
+	background-color: var(--background)
+}
+
+button {
+  position: relative;
+  top: 5px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--text_color);
+}
+
+/* navigation bar */
+.nav_bar {
+	position: relative;
+	display:flex;
+	justify-content:center;
+}
+
+.btn{
+	border: 0;
+	padding:2%;
+	font-size: 20px;
+	background-color: var(--background);
+}
+
+button:hover {
+  color: var(--hover);
+	cursor: pointer;
+}
+
+.nav_bar img {
+  width: 120px; 
+  height: 120px; 
+	position: absolute;
+	left: 30px;
+	background-color: var(--check);
+	border-radius: 0px 0px 10px 10px;
+}
+
+/* about us */
+.About{
+	width: 300px; /* Adjusted to match the sign_in popup */
+	background: var(--pop_up_background);
+	border-radius: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	padding: 20px 30px 30px; /* Adjust padding to match sign_in popup */
+	color:var(--text_color) ;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+
+.About h2{
+	text-align: center;
+	font-size: 38px;
+	font-weight: 500;
+	margin: 30px 0 10px;
+	margin-bottom: 20px;
+	background: none;
+}
+
+.About p{
+	background-color: var(--pop_up_background);
+	font-size: larger;
+	line-height: 1.2;
+}
+
+.About img{
+	width: 90px;
+	height: 90px;
+	margin-top: -30px;
+	border-radius: 50%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 10);
+	filter: grayscale(100%);
+}
+
+.About a {
+  text-decoration: none;
+}
+
+.About a img {
+  transition: transform 0.3s;
+}
+
+.About a:hover img {
+  transform: scale(1.05); 
+	filter: grayscale(0%);
+}
+
+
+.About button{
+	width: 100%;
+	margin-top: 50px;
+	padding: 10px 0;
+	background:var(--text_color);
+	color: var(--pop_up_background);
+	border: 0;
+	outline: none;
+	font-size: 18px;
+	border-radius: 30px;
+	box-shadow: 0 5px 5px var(--shadow);
+}
+
+/*Stats*/
+
+.Stats {
+	width: 600px;
+	background: var(--pop_up_background);
+	border-radius: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	padding: 20px 30px 30px;
+	color:var(--text_color) ;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+
+.task_container {
+	display: flex;
+}
+
+.finished_tasks {
+	flex: 1;
+}
+
+.chart_for_nerds {
+	flex: 1;
+}
+
+.chart {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.bar {
+  width: 20px;
+  background-color: #007bff;
+  border-radius: 3px;
+}
+
+/* Styles for sign-in */
+.sign_in h2{
+	text-align: center;
+	font-size: 38px;
+	font-weight: 500;
+	margin: 30px 0 10px;
+	margin-bottom: 20px;
+	background: none;
+}
+
+.sign_in{
+    width: 300px;
+    background: var(--pop_up_background);
+    border-radius: 30px;
+    position: absolute;
+    top: 1;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 20px 30px 30px;
+    color: var(--text_color);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+.sign_in form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text_color);
+}
+
+#sign_in_btn {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: var(--text_color);
+    color: var(--pop_up_background);
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 30px;
+    box-shadow: 0 5px 5px var(--shadow);
+    cursor: pointer;
+}
+
+/* Additional options for sign-in form */
+
+.sign_in .additional-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sign_in .additional-options button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sign_in .additional-options a {
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+}
+/**/
+
+.open {
+	visibility: visible;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	z-index: 8;
+}
+
+main {
+  position: relative;
+	top:0px;
+	width: 300px;
+  height: 500px;
+  margin: 40px auto;
+  text-align: center;
+  border-radius: 1px;
+  padding: 20px;
+	margin-bottom: 5px;
+}
+
+#pomo {
+	position: relative;
+	top: 30px;
+	font-size: 40px;
+	color: var(--text_color);
+	z-index: 7;
+}
+
+/* tasks */
+
+.tasks {
+	background: var(--tasks_background);
+	border-radius: 20px;
+	position:absolute;
+	top: 4vw;
+	left: 35vw;
+	width: 220px;
+	padding:10px 30px 30px;
+	color: var(--text_color);
+	margin-top: 20px;
+}
+
+#taskInput{
+	background: var(--input_background);
+	color: var(--check);
+	margin-top: 5px;
+	border-radius: 50px;
+	padding: 1rem 2rem;
+	overflow: hidden;
+	text-align: left;
+}
+
+
+
+#add {
+	background: var(--tasks_background);
+	color: var(--text_color);
+	border-radius: 15px;
+	height: 30px;
+	position: absolute;
+	right: 50px;
+	top: 24px;
+}
+
+.all-the-tasks {
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x:hidden;
+}
+
+.field-group {
+	display: flex;
+	flex-direction: column;
+  margin-top: 6px;
+}
+
+.checkbox-field{
+	opacity: 0;
+}
+
+/*check mark not the label*/
+.checkbox-label{
+	position:relative;
+	align-self:baseline;
+	padding-left: 50px;
+	font-size: 1.5em;
+	line-height: 1em;
+	color: var(--text_color);
+	cursor: pointer;
+	margin-left: 1px;
+	text-align: left;
+}
+
+.checkbox-label::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background: var(--input_background);
+}
+
+.checkbox-label::after{
+	content: '';
+	position: absolute;
+	left: 10px;
+	top: 4px;
+	width: 5px;
+	height: 12px;
+	border: solid var(--check);
+	border-width: 0 6px 6px 0;
+	transition: 0.2s ease;
+}
+
+.checkbox-field:not(:checked) + .checkbox-label::after {
+	transform: scale(0);
+	opacity: 0;
+}
+
+.checkbox-field:checked + .checkbox-label::after {
+	transform:rotate(35deg) scale(1);
+	opacity: 1;
+}
+
+.tasks .field-group input[type="checkbox"] {
+  order: 2;
+}
+
+
+/*Circule*/
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-container {
+	position: relative;
+	top: 150px;
+}
+.circle-container {
+	border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	background-color: var(--ring_back);
+	position: absolute;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.semicircle {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: right center;
+}
+
+.semicircle:nth-child(1) {
+	background-color: var(--ring);
+	z-index: 2;
+}
+
+.semicircle:nth-child(2) {
+	background-color: var(--ring);
+	z-index: 3;
+}
+
+.semicircle:nth-child(3) {
+	background-color: var(--ring_back);
+	z-index: 4;
+	display: none;
+}
+
+.outermost-circle {
+	width: 390px;
+	height: 390px;
+	background-color: var(--background);
+	border-radius: 50%;
+	z-index: 5;
+}
+
+/*timer*/
+.timer {
+	z-index: 7;
+}
+.countdown {
+	display: flex;
+}
+
+.countdown div {
+	position: relative;
+	font-size: 100px;
+	color: var(--text_color);
+}
+
+/*controls*/
+
+.controls {
+	position: relative;
+	top:150px;
+	padding-bottom: 20px;
+	letter-spacing: 30px;
+}
+
+/* footer */
+
+footer {
+display:flex;
+justify-content: center;
+color: var(--text_color);
+margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1088px) {
+	main {
+		margin-top: 0px;
+	}
+	.main-container {
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px; 
+	}
+
+	.tasks {
+	top: auto; 
+	left: 50%; 
+	transform: translateX(-50%); 
+	margin-top: 430px;
+	} 
+
+	footer {
+	width: 100%;
+	text-align: center; 
+	padding: 50px 0; 
+	}
+
+	.all-the-tasks {
+	max-height: 50px;
+	overflow:auto;
+	}
+
+}@media (max-width: 867px) {
+	.nav_bar img {
+	width: 90px; 
+	height: 90px;
+	}
+
+	.nav_bar .btn {
+	display: none;
+	}
+}
