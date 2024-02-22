@@ -59,15 +59,15 @@ const steadyGrowth = document.getElementById("SteadyGrowth");
 const tranquilityNight = document.getElementById("TranquilityNight");
 
 function applyQuietDesert() {
-	body.classList = ('theme1');
+	body.classList = ('QuietDesert');
 }
 
 function applySteadyGrowth() {
-	body.classList = ('theme2');
+	body.classList = ('SteadyGrowth');
 }
 
 function applyTranquilityNight() {
-	body.classList = ('theme3');
+	body.classList = ('TranquilityNight');
 }
 
 // Timer
