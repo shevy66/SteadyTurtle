@@ -8,14 +8,14 @@
 		<link rel="stylesheet" href="./reset.css">
 		<link rel="stylesheet" href="./index.css">
 	</head>
-
 	<body class="theme1">
 		<header>
 			<div class="nav_bar">
 				<img src="./Images/Logo/SteadyTurtle.png" alt="Steady Turtle Logo">
 				<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
-				<button type="button" id="toggleButton" class="btn" >THEMES</button>
+				<button type="button" class="btn" onclick="openThemes()">THEMES</button>
 				<button type="button" class="btn" onclick="openStats()">STATS</button>
+				<button type="button" class="btn" onclick="openAchivements()">ACHIVMENTS</button>
 				<button type="button" class="btn" onclick="openSignIn()">SIGN IN</button>
 			</div>
 		</header>
@@ -27,7 +27,22 @@
 			<p>
 				Steady Turtle is inspired by the old Rabbit and Turtle story. The moral of the story is slow and steady wins the race. I hope that you are the turtule and this application keeps you steady on doing what you want to do and not give up untill you achive it. Click on my image to know a little bit more about me.
 			</p>
-			<button type="button" onclick="closeAbout()">OK</button>
+			<button type="button" onclick="closeAbout()">Close</button>
+		</div>
+		<div class="themes" id="themes">
+			<div>
+				<img src="./quietDesert" alt="the main theme which is light and dark brown">
+				<button id="QuietDesert" onclick="applyQuietDesert()">Quiet Desert</button>
+			</div>
+			<div>
+				<img src="./steadyGrowth" alt="A theme which is light and dark green">
+				<button id="SteadyGrowth" onclick="applySteadyGrowth()">Steady Growth</button>
+			</div>
+			<div>
+				<img src="./tranquilityNight" alt="A theme which is light and dark blue">
+				<button id="TranquilityNight" onclick="applyTranquilityNight()">Tranquility Night</button>
+			</div>
+			<button type="button" onclick="closeThemes()">Close</button>
 		</div>
 		<div class="Stats" id="Stats">
 			<h2 class="center">Stats</h2>

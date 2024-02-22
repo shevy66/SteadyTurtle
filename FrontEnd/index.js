@@ -2,11 +2,17 @@
 
 let about = document.getElementById("About");
 let stats = document.getElementById("Stats");
-let signIn = document.getElementById("sign_in");
+let signIn = document.getElementById("sign_in"); //fix this to match my syntax
+let themes = document.getElementById("themes");
 
 function openAbout() {
 	close();
 	about.classList.add("open");
+}
+
+function openThemes() {
+	close();
+	themes.classList.add("open");  
 }
 
 function openStats() {
@@ -27,10 +33,15 @@ function close() {
 	about.classList.remove("open");
 	stats.classList.remove("open");
 	signIn.classList.remove("open");
+	themes.classList.remove("open");
 }
 
 function closeAbout() {
 	about.classList.remove("open");
+}
+
+function closeThemes() {
+	themes.classList.remove("open");
 }
 
 function closeStats() {
@@ -42,14 +53,21 @@ function closeSignIn() {
 }
 
 //Themes
+const body = document.body;
+const quietDesert = document.getElementById("QuietDesert");
+const steadyGrowth = document.getElementById("SteadyGrowth");
+const tranquilityNight = document.getElementById("TranquilityNight");
 
-const toggleButton = document.getElementById('toggleButton');
-toggleButton.addEventListener('click', toggleTheme);
+function applyQuietDesert() {
+	body.classList = ('theme1');
+}
 
-function toggleTheme() {
-	const body = document.body;
-    body.classList.toggle('theme1');
-    body.classList.toggle('theme2');
+function applySteadyGrowth() {
+	body.classList = ('theme2');
+}
+
+function applyTranquilityNight() {
+	body.classList = ('theme3');
 }
 
 // Timer
