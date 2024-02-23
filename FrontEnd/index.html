@@ -11,7 +11,7 @@
 	<body class="QuietDesert">
 		<header>
 			<div class="nav_bar">
-				<img src="./Images/Logo/SteadyTurtle.png" alt="Steady Turtle Logo">
+				<img src="./Images/Logo/SteadyTurtle.png" id="logo" alt="Steady Turtle Logo">
 				<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
 				<button type="button" class="btn" onclick="openThemes()">THEMES</button>
 				<button type="button" class="btn" onclick="openStats()">STATS</button>
@@ -32,16 +32,16 @@
 		<div class="themes" id="themes">
 			<div class="themes_container">
 				<div>
-					<img src="./Images/Themes/quietDesert.png" alt="the main theme which is light and dark brown">
-					<button id="QuietDesert" onclick="applyQuietDesert()">Quiet Desert</button>
+					<img src="./Images/Themes/quietDesert.png" alt="the main theme which is light and dark brown" onclick="applyQuietDesert()">
+					<p>Quiet Desert</p>
 				</div>
 				<div>
-					<img src="./steadyGrowth" alt="A theme which is light and dark green">
-					<button id="SteadyGrowth" onclick="applySteadyGrowth()">Steady Growth</button>
+					<img src="./Images/Themes/steadyGrowth.png" alt="A theme which is light and dark green" onclick="applySteadyGrowth()">
+					<p>Steady Growth</p>
 				</div>
 				<div>
-					<img src="./Images/Themes/tranquilityNight.png" alt="A theme which is light and dark blue">
-					<button id="TranquilityNight" onclick="applyTranquilityNight()">Tranquility Night</button>
+					<img src="./Images/Themes/tranquilityNight.png" alt="A theme which is light and dark blue"  onclick="applyTranquilityNight()">
+					<p>Tranquility Night</p>
 				</div>
 			</div>
 			<button type="button" onclick="closeThemes()">Close</button>

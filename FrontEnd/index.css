@@ -4,7 +4,7 @@
 
 .QuietDesert {
 	--background: #e9d0a6;
-	--pop_up_background: #ffd685;
+	--pop_up_background: #f6c490fe;
 	--text_color: #753F27;
 	--hover: #bd6b00;
 	--tasks_background: #c2975798;
@@ -13,21 +13,23 @@
 	--check: #753F27;
 	--ring_back: #d49e13;
 	--ring: #753F27;
-	--outermost_circule: #f5d08fa7;
+	--outermost_circule: #e9d0a6c5;
+	--logo_background: #753F27;
 }
 
 .SteadyGrowth {
-	--background: #4e9235a1;
-	--pop_up_background: #556d1fed;
+	--background: #78ab66;
+	--pop_up_background: #6a9149ed;
 	--text_color: #fffb86;
 	--hover: #aef63a;
-	--tasks_background: #31a83988;
+	--tasks_background: #4b794e8b;
 	--shadow: #20392e;
 	--input_background:#fffab1;
 	--check: #176a0c;
-	--ring_back: #bbed84;
-	--ring: #215317;
+	--ring_back: #78ab66;
+	--ring: #215317ff;
 	--outermost_circule: #4e9235a1;
+	--logo_background:#78ab66;
 }
 
 .TranquilityNight {
@@ -40,8 +42,9 @@
 	--input_background:#D9D9D9;
 	--check: #070f36;
 	--ring_back: #6181f6;
-	--ring: #4846c3;
-	--outermost_circule: #09124180;
+	--ring: #3e3cb2;
+	--outermost_circule: #091241c0;
+	--logo_background:#08103a;
 }
 
 body {
@@ -78,12 +81,12 @@ button:hover {
 	cursor: pointer;
 }
 
-.nav_bar img {
+#logo {
   width: 120px; 
   height: 120px; 
 	position: absolute;
 	left: 30px;
-	background-color: var(--check);
+	background-color: var(--logo_background);
 	border-radius: 0px 0px 10px 10px;
 }
 
@@ -164,12 +167,16 @@ button:hover {
 	display: flex;
 }
 
+.themes_container div{
+	margin: 5px;
+}
+
 .themes_container img {
 	width:300px;
 	border-radius: 10px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 10);
+	cursor: pointer;
 }
-
 
 /*Stats*/
 .Stats {

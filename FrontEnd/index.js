@@ -54,9 +54,6 @@ function closeSignIn() {
 
 //Themes
 const body = document.body;
-const quietDesert = document.getElementById("QuietDesert");
-const steadyGrowth = document.getElementById("SteadyGrowth");
-const tranquilityNight = document.getElementById("TranquilityNight");
 
 function applyQuietDesert() {
 	body.classList = ('QuietDesert');
