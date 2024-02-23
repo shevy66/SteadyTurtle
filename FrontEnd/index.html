@@ -27,7 +27,7 @@
 				<button type="button" class="btn" onclick="openStats()">STATS</button>
 				<button type="button" class="btn" onclick="openAchivements()">ACHIVMENTS</button>
 				<button type="button" class="btn" onclick="openSignIn()">SIGN IN</button>
-				<button type="button" onclick="closeBurger()">Close</button>
+				<button type="button" class="closeBtn" onclick="closeBurger()">Close</button>
 			</div>
 		</div>
 		<div class="About" id="About">
@@ -38,9 +38,10 @@
 			<p>
 				Steady Turtle is inspired by the old Rabbit and Turtle story. The moral of the story is slow and steady wins the race. I hope that you are the turtule and this application keeps you steady on doing what you want to do and not give up untill you achive it. Click on my image to know a little bit more about me.
 			</p>
-			<button type="button" onclick="closeAbout()">Close</button>
+			<button type="button" class="closeBtn" onclick="closeAbout()">Close</button>
 		</div>
 		<div class="Themes" id="Themes">
+			<h2 class="center">Themes</h2>
 			<div class="themes_container">
 				<div>
 					<img src="./Images/Themes/quietDesert.png" alt="the main theme which is light and dark brown" onclick="applyQuietDesert()">
@@ -55,7 +56,7 @@
 					<p>Tranquility Night</p>
 				</div>
 			</div>
-			<button type="button" onclick="closeThemes()">Close</button>
+			<button type="button" class="closeBtn" onclick="closeThemes()">Close</button>
 		</div>
 		<div class="Stats" id="Stats">
 			<h2 class="center">Stats</h2>
@@ -91,7 +92,7 @@
 					</div>					
 				</div>
 			</div>
-			<button type="button" id="close" class="center" onclick="closeStats()">Close</button>
+			<button type="button" id="close" class="closeBtn" onclick="closeStats()">Close</button>
 		</div>
 		<div class="sign_in" id="sign_in">
 			<h2>Sign In</h2>
@@ -110,7 +111,7 @@
 				<button type="button"><a href="./sign/signup.html">Sign Up</a></button>
 			</div>
 			<div class="additional-options">
-				<button type="button" onclick="closeSignIn()">Close</button>
+				<button type="button" class="closeBtn" onclick="closeSignIn()">Close</button>
 			</div>
 		</div>
 		<div id="pomo" class="center">Pomodoro</div>

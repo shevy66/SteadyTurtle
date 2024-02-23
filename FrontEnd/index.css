@@ -51,6 +51,14 @@ body {
 	background-color: var(--background)
 }
 
+h2{
+	text-align: center;
+	font-size: 38px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	background: none;
+}
+
 button {
   border: none;
   background: none;
@@ -62,6 +70,20 @@ button {
 button:hover {
   color: var(--hover);
 	cursor: pointer;
+}
+
+.closeBtn{
+	margin-top: 50px;
+	width: 100px;
+	padding: 10px 0;
+	background:var(--text_color);
+	color: var(--pop_up_background);
+	border: 0;
+	outline: none;
+	font-size: 18px;
+	border-radius: 30px;
+	box-shadow: 0 5px 5px var(--shadow);
+	align-self: center;
 }
 
 /*logo*/
@@ -96,7 +118,7 @@ button:hover {
 }
 
 .Burger {
-	width: 300px;
+	width: fit-content;
 	background: var(--pop_up_background);
 	border-radius: 30px;
 	position: absolute;
@@ -117,6 +139,9 @@ button:hover {
 }
 /* about */
 .About{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 	width: 300px;
 	background: var(--pop_up_background);
 	border-radius: 30px;
@@ -135,7 +160,6 @@ button:hover {
 	width: 130px;
 	height: 130px;
 	margin-top: -90px;
-	margin-left: 25%;
 	border-radius: 50%;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 10);
 	transition: transform 0.3s;
@@ -145,34 +169,15 @@ button:hover {
 	transform: scale(1.07); 
 }
 
-.About h2{
-	text-align: center;
-	font-size: 38px;
-	font-weight: 500;
-	margin-bottom: 20px;
-	background: none;
-}
-
 .About p{
 	font-size: larger;
 	line-height: 1.5;
 }
 
-.About button{
-	width: 100%;
-	margin-top: 50px;
-	padding: 10px 0;
-	background:var(--text_color);
-	color: var(--pop_up_background);
-	border: 0;
-	outline: none;
-	font-size: 18px;
-	border-radius: 30px;
-	box-shadow: 0 5px 5px var(--shadow);
-}
-
 /*themes*/
 .Themes {
+	display: flex;
+	flex-direction: column;
 	width: fit-content;
 	background: var(--pop_up_background);
 	border-radius: 30px;
@@ -180,8 +185,8 @@ button:hover {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0.1);
-	padding: 20px 30px 30px; /* Adjust padding to match sign_in popup */
-	color:var(--text_color) ;
+	padding: 20px 30px 30px;
+	color:var(--text_color);
 	visibility: hidden;
 	transition: transform 0.4s, top 0.4s;
 	text-align: center;
@@ -205,6 +210,8 @@ button:hover {
 
 /*Stats*/
 .Stats {
+	display: flex;
+	flex-direction: column;
 	width: fit-content;
 	background: var(--pop_up_background);
 	border-radius: 30px;
