@@ -52,28 +52,11 @@ body {
 }
 
 button {
-  position: relative;
-  top: 5px;
-  font-size: 20px;
-  letter-spacing: 1px;
   border: none;
   background: none;
   outline: none;
   color: var(--text_color);
-}
-
-/* navigation bar */
-.nav_bar {
-	position: relative;
-	display:flex;
-	justify-content:center;
-}
-
-.btn{
-	border: 0;
-	padding:2%;
 	font-size: 20px;
-	background-color: var(--background);
 }
 
 button:hover {
@@ -81,15 +64,57 @@ button:hover {
 	cursor: pointer;
 }
 
+/*logo*/
 #logo {
-  width: 120px; 
-  height: 120px; 
+	width: 120px; 
+	height: 120px; 
 	position: absolute;
 	left: 30px;
 	background-color: var(--logo_background);
 	border-radius: 0px 0px 10px 10px;
 }
 
+/*navigation bar*/
+.nav_bar {
+	position: relative;
+	display:flex;
+	justify-content:center;
+}
+
+.btn{
+	padding:2%;
+	font-size: 20px;
+	top: 5px;
+  letter-spacing: 1px;
+}
+
+/*burger*/
+#burger {
+	margin-inline-start: auto;
+	padding: 20px 30px;
+	display: none;
+}
+
+.Burger {
+	width: 300px;
+	background: var(--pop_up_background);
+	border-radius: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	padding: 20px 30px 30px; /* Adjust padding to match sign_in popup */
+	color:var(--text_color) ;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 10);
+}
+
+.burger_container {
+	display: flex;
+	flex-direction: column;
+
+}
 /* about */
 .About{
 	width: 300px;
@@ -147,7 +172,7 @@ button:hover {
 }
 
 /*themes*/
-.themes {
+.Themes {
 	width: fit-content;
 	background: var(--pop_up_background);
 	border-radius: 30px;
@@ -519,7 +544,7 @@ margin-top: 20px;
 }
 
 /* Responsive Design */
-@media (max-width: 1088px) {
+@media (max-width: 1020px) {
 	main {
 		margin-top: 0px;
 	}
@@ -539,7 +564,7 @@ margin-top: 20px;
 	footer {
 	width: 100%;
 	text-align: center; 
-	padding: 50px 0; 
+	padding: 40px 0; 
 	}
 
 	.all-the-tasks {
@@ -547,13 +572,23 @@ margin-top: 20px;
 	overflow:auto;
 	}
 
-}@media (max-width: 867px) {
-	.nav_bar img {
+}@media (max-width: 887px) {
+	.nav_bar {
+	margin-left:140px;
+	/* display: none; */
+	}
+}@media (max-width:701px) {
+	#logo {
 	width: 90px; 
 	height: 90px;
 	}
 
-	.nav_bar .btn {
+	.nav_bar {
 	display: none;
+	}
+
+	#burger {
+		display: flex;
+		right: auto;
 	}
 }

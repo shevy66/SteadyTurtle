@@ -3,7 +3,8 @@
 let about = document.getElementById("About");
 let stats = document.getElementById("Stats");
 let signIn = document.getElementById("sign_in"); //fix this to match my syntax
-let themes = document.getElementById("themes");
+let themes = document.getElementById("Themes");
+let burger = document.getElementById("Burger");
 
 function openAbout() {
 	close();
@@ -25,6 +26,11 @@ function openSignIn() {
 	signIn.classList.add("open");  
 }
 
+function openBurger() {
+	close();
+	burger.classList.add("open");  
+}
+
 function goBack() {
 	openSignIn();  
 }
@@ -34,6 +40,7 @@ function close() {
 	stats.classList.remove("open");
 	signIn.classList.remove("open");
 	themes.classList.remove("open");
+	burger.classList.remove("open");
 }
 
 function closeAbout() {
@@ -50,6 +57,10 @@ function closeStats() {
 
 function closeSignIn() {
 	signIn.classList.remove("open");
+}
+
+function closeBurger() {
+	burger.classList.remove("open");
 }
 
 //Themes

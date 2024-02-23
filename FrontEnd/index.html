@@ -10,15 +10,26 @@
 	</head>
 	<body class="QuietDesert">
 		<header>
+			<img src="./Images/Logo/SteadyTurtle.png" id="logo" alt="Steady Turtle Logo">
 			<div class="nav_bar">
-				<img src="./Images/Logo/SteadyTurtle.png" id="logo" alt="Steady Turtle Logo">
 				<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
 				<button type="button" class="btn" onclick="openThemes()">THEMES</button>
 				<button type="button" class="btn" onclick="openStats()">STATS</button>
 				<button type="button" class="btn" onclick="openAchivements()">ACHIVMENTS</button>
 				<button type="button" class="btn" onclick="openSignIn()">SIGN IN</button>
 			</div>
+			<button type="button" id="burger" onclick="openBurger()">Test</button>
 		</header>
+		<div class="Burger" id="Burger">
+			<div class="burger_container">
+				<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
+				<button type="button" class="btn" onclick="openThemes()">THEMES</button>
+				<button type="button" class="btn" onclick="openStats()">STATS</button>
+				<button type="button" class="btn" onclick="openAchivements()">ACHIVMENTS</button>
+				<button type="button" class="btn" onclick="openSignIn()">SIGN IN</button>
+				<button type="button" onclick="closeBurger()">Close</button>
+			</div>
+		</div>
 		<div class="About" id="About">
 			<a href="https://www.linkedin.com/in/shevan-abdulla-677685236/" target="_blank">
 				<img src="./images/Shevan.jpg" alt="picture of Shevan">
@@ -29,7 +40,7 @@
 			</p>
 			<button type="button" onclick="closeAbout()">Close</button>
 		</div>
-		<div class="themes" id="themes">
+		<div class="Themes" id="Themes">
 			<div class="themes_container">
 				<div>
 					<img src="./Images/Themes/quietDesert.png" alt="the main theme which is light and dark brown" onclick="applyQuietDesert()">
