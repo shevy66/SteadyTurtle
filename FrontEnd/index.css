@@ -13,23 +13,25 @@
 	--check: #753F27;
 	--ring_back: #d49e13;
 	--ring: #753F27;
+	--outermost_circule: #f5d08fa7;
 }
 
 .SteadyGrowth {
-	--background: #278605;
-	--pop_up_background: #239a06;
-	--text_color: #fff45f;
-	--hover: #385642;
-	--tasks_background: #189355d9;
+	--background: #4e9235a1;
+	--pop_up_background: #556d1fed;
+	--text_color: #fffb86;
+	--hover: #aef63a;
+	--tasks_background: #31a83988;
 	--shadow: #20392e;
-	--input_background:#D9D9D9;
+	--input_background:#fffab1;
 	--check: #176a0c;
-	--ring_back: #61c9f6;
-	--ring: #2255cc;
+	--ring_back: #bbed84;
+	--ring: #215317;
+	--outermost_circule: #4e9235a1;
 }
 
 .TranquilityNight {
-	--background: #070f36;
+	--background: #08103a;
 	--pop_up_background: #325cb0;
 	--text_color: #fbfaeb;
 	--hover: #a2b7ca;
@@ -39,6 +41,7 @@
 	--check: #070f36;
 	--ring_back: #6181f6;
 	--ring: #4846c3;
+	--outermost_circule: #09124180;
 }
 
 body {
@@ -166,6 +169,8 @@ button:hover {
 	border-radius: 10px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 10);
 }
+
+
 /*Stats*/
 .Stats {
 	width: 600px;
@@ -469,7 +474,7 @@ main {
 .outermost-circle {
 	width: 390px;
 	height: 390px;
-	background-color: var(--background);
+	background-color: var(--outermost_circule);
 	border-radius: 50%;
 	z-index: 5;
 }
