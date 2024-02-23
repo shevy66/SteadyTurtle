@@ -552,12 +552,6 @@ margin-top: 20px;
 		margin-top: 0px;
 	}
 
-	.main-container {
-	flex-direction: column;
-	align-items: center;
-	margin-top: 20px; 
-	}
-
 	.tasks {
 	top: auto; 
 	left: 50%; 
@@ -573,8 +567,8 @@ margin-top: 20px;
 
 	.all-the-tasks {
 	max-height: 50px;
-	overflow:auto;
 	}
+
 	.themes_container {
 		flex-direction: column;
 	}
