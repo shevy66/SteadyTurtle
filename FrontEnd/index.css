@@ -51,6 +51,18 @@ body {
 	background-color: var(--background)
 }
 
+main{
+	position: relative;
+	top:0px;
+	width: 300px;
+  height: 500px;
+  margin: 40px auto;
+  text-align: center;
+  border-radius: 1px;
+  padding: 20px;
+	margin-bottom: 5px;
+}
+
 h2{
 	text-align: center;
 	font-size: 38px;
@@ -342,28 +354,14 @@ input[type="password"] {
 	z-index: 8;
 }
 
-main {
-  position: relative;
-	top:0px;
-	width: 300px;
-  height: 500px;
-  margin: 40px auto;
-  text-align: center;
-  border-radius: 1px;
-  padding: 20px;
-	margin-bottom: 5px;
-}
-
+/*Pomodore Title*/
 #pomo {
-	position: relative;
-	top: 30px;
+	align-self: center;
 	font-size: 40px;
 	color: var(--text_color);
-	z-index: 7;
 }
 
 /* tasks */
-
 .tasks {
 	background: var(--tasks_background);
 	border-radius: 20px;
@@ -385,8 +383,6 @@ main {
 	overflow: hidden;
 	text-align: left;
 }
-
-
 
 #add {
 	background: var(--tasks_background);
@@ -464,7 +460,6 @@ main {
   order: 2;
 }
 
-
 /*Circule*/
 .center {
 	display: flex;
@@ -476,6 +471,7 @@ main {
 	position: relative;
 	top: 150px;
 }
+
 .circle-container {
 	border-radius: 50%;
 	width: 400px;
@@ -523,6 +519,7 @@ main {
 .timer {
 	z-index: 7;
 }
+
 .countdown {
 	display: flex;
 }
@@ -534,7 +531,6 @@ main {
 }
 
 /*controls*/
-
 .controls {
 	position: relative;
 	top:150px;
@@ -542,8 +538,7 @@ main {
 	letter-spacing: 30px;
 }
 
-/* footer */
-
+/*footer*/
 footer {
 display:flex;
 justify-content: center;
@@ -551,11 +546,12 @@ color: var(--text_color);
 margin-top: 20px;
 }
 
-/* Responsive Design */
+/*Screen Responsive*/
 @media (max-width: 1020px) {
 	main {
 		margin-top: 0px;
 	}
+
 	.main-container {
 	flex-direction: column;
 	align-items: center;
@@ -600,8 +596,8 @@ margin-top: 20px;
 	display: flex;
 	right: auto;
 	}
-	
+
 	.task_container {
-		flex-direction: column;
+	flex-direction: column;
 	}
 }
