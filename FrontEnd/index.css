@@ -125,8 +125,12 @@ button:hover {
 /*burger*/
 #burger {
 	margin-inline-start: auto;
-	padding: 20px 30px;
+	padding: 10px 10px;
 	display: none;
+	width: 40px;
+	border-radius: 50%;
+	background-color: var(--logo_background);
+	cursor: pointer;
 }
 
 .Burger {
