@@ -571,11 +571,12 @@ margin-top: 20px;
 	max-height: 50px;
 	overflow:auto;
 	}
-
+	.themes_container {
+		flex-direction: column;
+	}
 }@media (max-width: 887px) {
 	.nav_bar {
 	margin-left:140px;
-	/* display: none; */
 	}
 }@media (max-width:701px) {
 	#logo {
@@ -588,7 +589,7 @@ margin-top: 20px;
 	}
 
 	#burger {
-		display: flex;
-		right: auto;
+	display: flex;
+	right: auto;
 	}
 }
