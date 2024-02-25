@@ -124,8 +124,10 @@ button:hover {
 
 /*burger*/
 #burger {
-	margin-inline-start: auto;
-	padding: 10px 10px;
+	position: absolute;
+	display: flex;
+	left: 80vw;
+	padding: 10px 5px;
 	display: none;
 	width: 40px;
 	border-radius: 50%;
@@ -361,6 +363,7 @@ input[type="password"] {
 /*Pomodore Title*/
 #pomo {
 	align-self: center;
+	padding: 10px;
 	font-size: 40px;
 	color: var(--text_color);
 }
@@ -477,6 +480,7 @@ input[type="password"] {
 }
 
 .circle-container {
+	position: absolute;
 	border-radius: 50%;
 	width: 400px;
 	height: 400px;
@@ -526,6 +530,8 @@ input[type="password"] {
 
 .countdown {
 	display: flex;
+	z-index: 1;
+	
 }
 
 .countdown div {
@@ -547,7 +553,6 @@ footer {
 display:flex;
 justify-content: center;
 color: var(--text_color);
-margin-top: 20px;
 }
 
 /*Screen Responsive*/
@@ -559,8 +564,8 @@ margin-top: 20px;
 	.tasks {
 	top: auto; 
 	left: 50%; 
-	transform: translateX(-50%); 
-	margin-top: 430px;
+	transform: translate(-50%); 
+	margin-top: 410px;
 	} 
 
 	footer {
