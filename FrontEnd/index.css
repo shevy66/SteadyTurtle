@@ -603,4 +603,19 @@ color: var(--text_color);
 	.task_container {
 	flex-direction: column;
 	}
+	}@media (max-width:375px){
+	#logo {
+	width: 70px; 
+	height: 70px;
+	}
+	#pomo {
+		margin-left: 25px;
+	}
+	.circle-container {
+		width:360px;
+		height: 360px;
+	}
+	footer {
+		padding-bottom: 1px;
+	}
 }
