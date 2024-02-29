@@ -1,9 +1,10 @@
 // popup effect
 
 let about = document.getElementById("About");
+let themes = document.getElementById("Themes");
+let achivments = document.getElementById("Achivments");
 let stats = document.getElementById("Stats");
 let signIn = document.getElementById("sign_in"); //fix this to match my syntax
-let themes = document.getElementById("Themes");
 let burger = document.getElementById("Burger");
 
 function openAbout() {
@@ -14,6 +15,11 @@ function openAbout() {
 function openThemes() {
 	close();
 	themes.classList.add("open");  
+}
+
+function openAchivments() {
+	close();
+	achivments.classList.add("open");
 }
 
 function openStats() {
@@ -37,9 +43,10 @@ function goBack() {
 
 function close() {
 	about.classList.remove("open");
+	themes.classList.remove("open");
+	achivments.classList.remove("open");
 	stats.classList.remove("open");
 	signIn.classList.remove("open");
-	themes.classList.remove("open");
 	burger.classList.remove("open");
 }
 
@@ -49,6 +56,10 @@ function closeAbout() {
 
 function closeThemes() {
 	themes.classList.remove("open");
+}
+
+function closeAchivments() {
+	achivments.classList.remove("open");
 }
 
 function closeStats() {

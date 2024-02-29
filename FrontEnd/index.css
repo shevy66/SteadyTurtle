@@ -153,7 +153,6 @@ button:hover {
 .burger_container {
 	display: flex;
 	flex-direction: column;
-
 }
 /* about */
 .About{
@@ -225,7 +224,40 @@ button:hover {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 10);
 	cursor: pointer;
 }
+/*Achivments*/
+.Achivments {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: fit-content;
+	background: var(--pop_up_background);
+	border-radius: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	padding: 20px 30px 30px; /* Adjust padding to match sign_in popup */
+	color:var(--text_color) ;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 10);
+}
 
+.finished_container{
+	background-color: var(--background);
+	margin: 20px;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid var(--check);
+}
+
+.finished_tasks {
+	margin: 20px;
+	font-size: 25px;
+	padding-right: 15px;
+	overflow-y: scroll;
+}
 /*Stats*/
 .Stats {
 	display: flex;
@@ -242,15 +274,6 @@ button:hover {
 	visibility: hidden;
 	transition: transform 0.4s, top 0.4s;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 10);
-}
-
-.task_container {
-	display: flex;
-	text-align: center;
-}
-
-.finished_tasks {
-	flex: 1;
 }
 
 .chart_for_nerds {
@@ -629,5 +652,4 @@ color: var(--text_color);
 	footer {
 		padding-bottom: 1px;
 	}
-
 }

@@ -14,8 +14,8 @@
 			<div class="nav_bar">
 				<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
 				<button type="button" class="btn" onclick="openThemes()">THEMES</button>
+				<button type="button" class="btn" onclick="openAchivments()">ACHIVMENTS</button>
 				<button type="button" class="btn" onclick="openStats()">STATS</button>
-				<button type="button" class="btn" onclick="openAchivements()">ACHIVMENTS</button>
 				<button type="button" class="btn" onclick="openSignIn()">SIGN IN</button>
 			</div>
 			<img src="./Images/Burger/Burger.png" id="burger" alt="image of a turtle from the side" onclick="openBurger()">
@@ -23,8 +23,8 @@
 				<div class="burger_container">
 					<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
 					<button type="button" class="btn" onclick="openThemes()">THEMES</button>
+					<button type="button" class="btn" onclick="openAchivments()">ACHIVMENTS</button>
 					<button type="button" class="btn" onclick="openStats()">STATS</button>
-					<button type="button" class="btn" onclick="openAchivements()">ACHIVMENTS</button>
 					<button type="button" class="btn" onclick="openSignIn()">SIGN IN</button>
 					<button type="button" class="closeBtn" onclick="closeBurger()">Close</button>
 				</div>
@@ -58,39 +58,39 @@
 			</div>
 			<button type="button" class="closeBtn" onclick="closeThemes()">Close</button>
 		</div>
+		<div class="Achivments" id="Achivments">
+			<h2 class="center">Achivments</h2>
+			<div  class="finished_container">
+				<h3>Today:</h3>
+				<ol class="finished_tasks">
+					<li>Task1</li>
+					<li>Task2</li>
+					<li>Task3</li>
+				</ol>
+			</div>
+			<div class="finished_container">
+				<h3>All:</h3>
+				<ol class="finished_tasks">
+					<li>Task1</li>
+					<li>Task2</li>
+					<li>Task3</li>
+				</ol>
+			</div>
+			<button type="button" id="close" class="closeBtn" onclick="closeAchivments()">Close</button>
+		</div>
 		<div class="Stats" id="Stats">
 			<h2 class="center">Stats</h2>
-			<div class="task_container">
-				<div class="finished_tasks">
-					<h1 class="center">Finished Tasks</h1>
-					<div>Today:</div>
-						<ol>
-							<li>Task1</li>
-							<li>Task2</li>
-							<li>Task3</li>
-						</ol>
-					<div>All:</div>
-						<ol>
-							<li>Task1</li>
-							<li>Task2</li>
-							<li>Task3</li>
-						</ol>
-				</div>
-				<div class="chart_for_nerds">
-					<h1 class="center">Charts for Nerds</h1>
-					<div class="chart">
-						<div class="bar" style="height: 10%;"></div>
-						<div class="bar" style="height: 60%;"></div>
-						<div class="bar" style="height: 40%;"></div>
-						<div class="bar" style="height: 90%;"></div>
-					</div>
-					<div class="chart">
-						<div class="bar" style="height: 80%;"></div>
-						<div class="bar" style="height: 60%;"></div>
-						<div class="bar" style="height: 40%;"></div>
-						<div class="bar" style="height: 90%;"></div>
-					</div>					
-				</div>
+			<div class="chart">
+				<div class="bar" style="height: 10%;"></div>
+				<div class="bar" style="height: 60%;"></div>
+				<div class="bar" style="height: 40%;"></div>
+				<div class="bar" style="height: 90%;"></div>
+			</div>
+			<div class="chart">
+				<div class="bar" style="height: 80%;"></div>
+				<div class="bar" style="height: 60%;"></div>
+				<div class="bar" style="height: 40%;"></div>
+				<div class="bar" style="height: 90%;"></div>
 			</div>
 			<button type="button" id="close" class="closeBtn" onclick="closeStats()">Close</button>
 		</div>
