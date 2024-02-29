@@ -285,20 +285,29 @@ button:hover {
 	flex: 1;
 }
 
+.stats_rapper {
+	display: flex;
+	flex-direction: row;
+}
+
 .chart {
+	display: flex;
+	flex-direction:row;
+	margin: 20px;
   width: 200px;
   height: 150px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  background-color: var(--input_background);
   padding: 10px;
+	border-radius: 10px;
+	border: 1px solid var(--check);
 }
 
 .bar {
+	align-self: flex-end;
   width: 20px;
-  background-color: #007bff;
+  background-color: var(--check);
   border-radius: 3px;
+	margin: 5px;
 }
 
 /* Styles for sign-in */
@@ -610,6 +619,9 @@ color: var(--text_color);
 		flex-direction: column;
 	}
 	.finished_rapper {
+		flex-direction: column;
+	}
+	.stats_rapper {
 		flex-direction: column;
 	}
 }@media (max-width: 887px) {
