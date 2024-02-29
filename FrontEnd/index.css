@@ -611,6 +611,17 @@ color: var(--text_color);
 	#pomo {
 		margin-left: 25px;
 	}
+	.Themes {
+		padding: 0px 10px;
+	}
+	.Themes h2 {
+		margin-bottom: 0px;
+	}
+	.Themes button{
+		margin-top: 0px;
+		margin-bottom: 5px;
+		padding: 5px;
+	}
 	.circle-container {
 		width:360px;
 		height: 360px;
@@ -618,4 +629,5 @@ color: var(--text_color);
 	footer {
 		padding-bottom: 1px;
 	}
+
 }
