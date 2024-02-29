@@ -243,6 +243,11 @@ button:hover {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 10);
 }
 
+.finished_rapper {
+	display: flex;
+	flex-direction: row;
+}
+
 .finished_container{
 	background-color: var(--background);
 	margin: 20px;
@@ -602,6 +607,9 @@ color: var(--text_color);
 	}
 
 	.themes_container {
+		flex-direction: column;
+	}
+	.finished_rapper {
 		flex-direction: column;
 	}
 }@media (max-width: 887px) {
