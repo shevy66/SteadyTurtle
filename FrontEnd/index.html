@@ -112,21 +112,22 @@
 		</div>
 		<div class="sign_in" id="sign_in">
 			<h2>Sign In</h2>
-			<form method="post">
-				<div>
-					<label for="username">Username:</label>
-					<input type="text" name="username" placeholder="Enter your username">
+			<form class="user_info">
+				<div class="labels">
+					<label for="username">Username/email</label>
+					<label for="password">Password</label>
 				</div>
-				<div>
-					<label for="password">Password:</label>
-					<input type="password" name="password" placeholder="Enter your password">
+				<div class="inputs">
+					<input type="text" name="username" class="input_box" placeholder="Enter your username">
+					<input type="password" name="password" class="input_box" placeholder="Enter your password">
 				</div>
-				<input type="submit" id="sign_in_btn" value="Sign In" />
-			<form>
-			<div class="additional-options">
-				<button type="button"><a href="./sign/signup.html">Sign Up</a></button>
-			</div>
-			<div class="additional-options">
+			</form>
+			<div class="user_options">
+				<div class="existing_user">
+					<button type="button">Sign In</button>
+					<button type="button">Forgot Password</button>
+				</div>
+				<button type="button" id="SignUp">Sign Up</button>
 				<button type="button" class="closeBtn" onclick="closeSignIn()">Close</button>
 			</div>
 		</div>
