@@ -127,19 +127,19 @@
 					<button type="button">Sign In</button>
 					<button type="button">Forgot Password</button>
 				</div>
-				<button type="button" id="sign-up">Sign Up</button>
+				<button type="button" id="sign-up-btn" onclick="openSignUp()">Sign Up</button>
 				<button type="button" class="close-btn" onclick="closeSignIn()">Close</button>
 			</div>
 		</div>
 		<div class="sign-up" id="sign-up">
 			<h2>Sign Up</h2>
 			<form class="user-info">
-				<div class="labels">
+				<div class="labels-sign-up">
 					<label for="username">Email</label>
 					<label for="username">Username</label>
 					<label for="password">Password</label>
 				</div>
-				<div class="inputs">
+				<div class="inputs-sign-up">
 					<input type="email" name="username" class="input-box" placeholder="Enter your username">
 					<input type="text" name="username" class="input-box" placeholder="Enter your username">
 					<input type="password" name="password" class="input-box" placeholder="Enter your password">
@@ -147,7 +147,7 @@
 			</form>
 			<div class="user-options">
 				<button type="button">Sign Up</button>
-				<button type="button" class="close-btn" onclick="closeSignIn()">Close</button>
+				<button type="button" class="close-btn" onclick="closeSignUp()">Close</button>
 			</div>
 		</div>
 		<div id="pomo" class="center">Pomodoro</div>

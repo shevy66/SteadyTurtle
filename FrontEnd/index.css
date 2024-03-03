@@ -337,12 +337,16 @@ button:hover {
 }
 
 .labels {
-	font-size: 22px;
 	display: flex;
 	flex-direction: column;
 	align-items: self-end;
-	margin-top: 5px;
+	justify-content: space-between;
 	margin-right: 6px;
+	font-size: 22px;
+}
+
+.inputs {
+	justify-content: space-between;
 }
 
 .input-box {
@@ -359,7 +363,7 @@ button:hover {
 	margin-top: 10px;
 }
 
-#sign-up {
+#sign-up-btn {
 	margin-top: 20px;
 }
 
@@ -378,6 +382,18 @@ button:hover {
 	transition: transform 0.4s, top 0.4s;
 }
 
+.labels-sign-up {
+	display: flex;
+	flex-direction: column;
+	align-items: self-end;
+	justify-content: space-between;
+	margin-right: 6px;
+	font-size: 22px;
+}
+
+.inputs-sign-up {
+	justify-content: space-between;
+}
 /* open is for all the pop ups*/
 
 .open {

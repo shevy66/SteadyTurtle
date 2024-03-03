@@ -4,7 +4,8 @@ let about = document.getElementById("about");
 let themes = document.getElementById("themes");
 let achivments = document.getElementById("achivments");
 let stats = document.getElementById("stats");
-let signIn = document.getElementById("sign-in"); //fix this to match my syntax
+let signIn = document.getElementById("sign-in");
+let signUp = document.getElementById("sign-up");
 let burger = document.getElementById("burger");
 
 function openAbout() {
@@ -32,13 +33,14 @@ function openSignIn() {
 	signIn.classList.add("open");  
 }
 
+function openSignUp() {
+	close();
+	signUp.classList.add("open");  
+}
+
 function openBurger() {
 	close();
 	burger.classList.add("open");  
-}
-
-function goBack() {
-	openSignIn();  
 }
 
 function close() {
@@ -47,6 +49,7 @@ function close() {
 	achivments.classList.remove("open");
 	stats.classList.remove("open");
 	signIn.classList.remove("open");
+	signUp.classList.remove("open");
 	burger.classList.remove("open");
 }
 
@@ -68,6 +71,10 @@ function closeStats() {
 
 function closeSignIn() {
 	signIn.classList.remove("open");
+}
+
+function closeSignUp() {
+	signUp.classList.remove("open");
 }
 
 function closeBurger() {
