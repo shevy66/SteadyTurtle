@@ -78,15 +78,15 @@ function closeBurger() {
 const body = document.body;
 
 function applyQuietDesert() {
-	body.classList = ('QuietDesert');
+	body.classList = ('quiet-desert');
 }
 
 function applySteadyGrowth() {
-	body.classList = ('SteadyGrowth');
+	body.classList = ('steady-growth');
 }
 
 function applyTranquilityNight() {
-	body.classList = ('TranquilityNight');
+	body.classList = ('tranquility-night');
 }
 
 // Timer
