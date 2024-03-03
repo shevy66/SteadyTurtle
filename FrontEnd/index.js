@@ -1,11 +1,11 @@
 // popup effect
 
-let about = document.getElementById("About");
-let themes = document.getElementById("Themes");
-let achivments = document.getElementById("Achivments");
-let stats = document.getElementById("Stats");
-let signIn = document.getElementById("sign_in"); //fix this to match my syntax
-let burger = document.getElementById("Burger");
+let about = document.getElementById("about");
+let themes = document.getElementById("themes");
+let achivments = document.getElementById("achivments");
+let stats = document.getElementById("stats");
+let signIn = document.getElementById("sign-in"); //fix this to match my syntax
+let burger = document.getElementById("burger");
 
 function openAbout() {
 	close();

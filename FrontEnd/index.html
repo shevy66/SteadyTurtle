@@ -11,16 +11,16 @@
 	<body class="QuietDesert">
 		<header>
 			<img src="./Images/Logo/SteadyTurtle.png" id="logo" alt="Steady Turtle Logo">
-			<div class="nav_bar">
+			<div class="nav-bar">
 				<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
 				<button type="button" class="btn" onclick="openThemes()">THEMES</button>
 				<button type="button" class="btn" onclick="openAchivments()">ACHIVMENTS</button>
 				<button type="button" class="btn" onclick="openStats()">STATS</button>
 				<button type="button" class="btn" onclick="openSignIn()">SIGN IN</button>
 			</div>
-			<img src="./Images/Burger/Burger.png" id="burger" alt="image of a turtle from the side" onclick="openBurger()">
-			<div class="Burger" id="Burger">
-				<div class="burger_container">
+			<img src="./Images/Burger/Burger.png" id="burgerImg" alt="image of a turtle from the side" onclick="openBurger()">
+			<div class="burger" id="burger">
+				<div class="burger-container">
 					<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
 					<button type="button" class="btn" onclick="openThemes()">THEMES</button>
 					<button type="button" class="btn" onclick="openAchivments()">ACHIVMENTS</button>
@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</header>
-		<div class="About" id="About">
+		<div class="about" id="about">
 			<a href="https://www.linkedin.com/in/shevan-abdulla-677685236/" target="_blank">
 				<img src="./images/Shevan.jpg" alt="picture of Shevan">
 			</a>
@@ -40,9 +40,9 @@
 			</p>
 			<button type="button" class="closeBtn" onclick="closeAbout()">Close</button>
 		</div>
-		<div class="Themes" id="Themes">
+		<div class="themes" id="themes">
 			<h2>Themes</h2>
-			<div class="themes_container">
+			<div class="themes-container">
 				<div>
 					<img src="./Images/Themes/quietDesert.png" alt="the main theme which is light and dark brown" onclick="applyQuietDesert()">
 					<p>Quiet Desert</p>
@@ -58,20 +58,20 @@
 			</div>
 			<button type="button" class="closeBtn" onclick="closeThemes()">Close</button>
 		</div>
-		<div class="Achivments" id="Achivments">
+		<div class="achivments" id="achivments">
 			<h2 class="center">Achivments</h2>
-			<div class="finished_rapper">
-				<div  class="finished_container">
+			<div class="finished-rapper">
+				<div  class="finished-container">
 					<h3>Today:</h3>
-					<ol class="finished_tasks">
+					<ol class="finished-tasks">
 						<li>Task1</li>
 						<li>Task2</li>
 						<li>Task3</li>
 					</ol>
 				</div>
-				<div class="finished_container">
+				<div class="finished-container">
 					<h3>All:</h3>
-					<ol class="finished_tasks">
+					<ol class="finished-tasks">
 						<li>Task1</li>
 						<li>Task2</li>
 						<li>Task3</li>
@@ -80,9 +80,9 @@
 			</div>
 			<button type="button" id="close" class="closeBtn" onclick="closeAchivments()">Close</button>
 		</div>
-		<div class="Stats" id="Stats">
+		<div class="stats" id="stats">
 			<h2 class="center">Stats</h2>
-			<div class="stats_rapper">
+			<div class="stats-rapper">
 				<div>
 					<h3 class="center">Last week</h3>
 					<div class="chart">
@@ -110,24 +110,43 @@
 			</div>
 			<button type="button" id="close" class="closeBtn" onclick="closeStats()">Close</button>
 		</div>
-		<div class="sign_in" id="sign_in">
+		<div class="sign-in" id="sign-in">
 			<h2>Sign In</h2>
-			<form class="user_info">
+			<form class="user-info">
 				<div class="labels">
 					<label for="username">Username/email</label>
 					<label for="password">Password</label>
 				</div>
 				<div class="inputs">
-					<input type="text" name="username" class="input_box" placeholder="Enter your username">
-					<input type="password" name="password" class="input_box" placeholder="Enter your password">
+					<input type="text" name="username" class="input-box" placeholder="Enter your username">
+					<input type="password" name="password" class="input-box" placeholder="Enter your password">
 				</div>
 			</form>
-			<div class="user_options">
-				<div class="existing_user">
+			<div class="user-options">
+				<div class="existing-user">
 					<button type="button">Sign In</button>
 					<button type="button">Forgot Password</button>
 				</div>
 				<button type="button" id="SignUp">Sign Up</button>
+				<button type="button" class="closeBtn" onclick="closeSignIn()">Close</button>
+			</div>
+		</div>
+		<div class="sign-up" id="SignUp">
+			<h2>Sign Up</h2>
+			<form class="user-info">
+				<div class="labels">
+					<label for="username">Email</label>
+					<label for="username">Username</label>
+					<label for="password">Password</label>
+				</div>
+				<div class="inputs">
+					<input type="email" name="username" class="input-box" placeholder="Enter your username">
+					<input type="text" name="username" class="input-box" placeholder="Enter your username">
+					<input type="password" name="password" class="input-box" placeholder="Enter your password">
+				</div>
+			</form>
+			<div class="user-options">
+				<button type="button">Sign Up</button>
 				<button type="button" class="closeBtn" onclick="closeSignIn()">Close</button>
 			</div>
 		</div>
@@ -158,7 +177,7 @@
 					<div id="seconds">00</div>
 				</div>
 			</div>
-				<div class="controls timer">
+			<div class="controls">
 				<div>
 					<button type="button" onclick="addFive()">+5</button>
 					<button type="button" onclick="subFive()">-5</button>
