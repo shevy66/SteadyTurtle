@@ -225,7 +225,7 @@ function resetProgressRing() {
 //tasks
 document.addEventListener('DOMContentLoaded', function () {
 	const addButton = document.getElementById('add');
-	const taskInput = document.getElementById('taskInput');
+	const taskInput = document.getElementById('task-input');
 	const taskContainer = document.querySelector('.tasks .field-group');
 	const existingCheckbox = document.querySelector('.tasks .field-group .checkbox-field');
 

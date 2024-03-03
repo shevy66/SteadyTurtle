@@ -123,7 +123,7 @@ button:hover {
 }
 
 /*Burger*/
-#burgerImg {
+#burger-img {
 	position: absolute;
 	display: flex;
 	left: 80vw;
@@ -359,7 +359,7 @@ button:hover {
 	margin-top: 10px;
 }
 
-#SignUp {
+#sign-up {
 	margin-top: 20px;
 }
 
@@ -408,7 +408,7 @@ button:hover {
 	margin-top: 20px;
 }
 
-#taskInput{
+#task-input{
 	background: var(--input_background);
 	color: var(--check);
 	margin-top: 5px;
@@ -624,7 +624,7 @@ color: var(--text_color);
 	display: none;
 	}
 
-	#burgerImg {
+	#burger-img {
 	display: flex;
 	right: auto;
 	}
