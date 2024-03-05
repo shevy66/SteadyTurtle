@@ -1,12 +1,32 @@
+if (process.env.NODE_ENV !== 'production') {
+	require('dotenv').config()
+}
 const express = require('express') //importing express
 const app = express() //using the app variable from express
 const bcrypt = require('bcrypt') //importing bcrypt to user
+const passport = require('passport') //importing passport
+const flash = require('express-flash') //importing express-flash
+const session = require('express-session') // importing express-session
+
+const intializePassport = require('./passport-config') //importing the data from the file that we created
+intializePassport(
+	passport,
+	email => users.find(user => user.email === email) //this part needs to be studies more
+)
+
 
 const users = []//We are storing the data here but usually you need to store it to a database and connect it to your database here, look up how to connect node js to mongo db to set this up later.
 
 app.set('view-engine', 'ejs') //to the server that we are using ejs
 app.use(express.urlencoded({ extended:false})) //this is a little bit confusing for me
-
+app.use(flash()) //we are telling the app function of express to use flash
+app.use(session( {//we are telling the app function of express to use session
+	secret: process.env.SESSION_SECRET, //we are referancing the .env file
+	resave: false, //we do not want the session to be saved
+	saveUninitialized: false //because we do not want to save an empty value in our session
+}))
+app.use(passport.initialize())//the initialize is a method of passport
+app.use(passport.session()) //this is going to work with the app.use(session())
 //GETs
 app.get('/', (req, res) => {//setting up the routes, / is the index, req = requist, res = response
 	res.render('index.ejs', { name: 'Shevan'}) // the ./ is suffecient to locate the file within the project which will rendered
@@ -21,9 +41,11 @@ app.get('/register', (req, res) => {
 })
 
 //POSTS
-app.post('/login', (req,res) => {
-	
-})
+app.post('/login', passport.authenticate('local', { //we are using the authenticate method of passport with our local strategy
+	successRedirect: '/', //successful login go back to home
+	failureRedirect: '/login', //unsuccessful login go back to login page
+	failureFlash:true
+}))
 
 app.post('/register', async (req,res) => { //we added async for the try catch
 	try { //with try catch you need to run an async function
