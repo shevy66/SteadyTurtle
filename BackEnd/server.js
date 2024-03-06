@@ -1,68 +1,87 @@
 if (process.env.NODE_ENV !== 'production') {
-	require('dotenv').config()
+  require('dotenv').config()
 }
-const express = require('express') //importing express
-const app = express() //using the app variable from express
-const bcrypt = require('bcrypt') //importing bcrypt to user
-const passport = require('passport') //importing passport
-const flash = require('express-flash') //importing express-flash
-const session = require('express-session') // importing express-session
 
-const intializePassport = require('./passport-config') //importing the data from the file that we created
-intializePassport(
-	passport,
-	email => users.find(user => user.email === email) //this part needs to be studies more
+const express = require('express')
+const app = express()
+const bcrypt = require('bcrypt')
+const passport = require('passport')
+const flash = require('express-flash')
+const session = require('express-session')
+const methodOverride = require('method-override')
+
+const initializePassport = require('./passport-config')
+initializePassport(
+  passport,
+  email => users.find(user => user.email === email),
+  id => users.find(user => user.id === id)
 )
 
+const users = []
 
-const users = []//We are storing the data here but usually you need to store it to a database and connect it to your database here, look up how to connect node js to mongo db to set this up later.
-
-app.set('view-engine', 'ejs') //to the server that we are using ejs
-app.use(express.urlencoded({ extended:false})) //this is a little bit confusing for me
-app.use(flash()) //we are telling the app function of express to use flash
-app.use(session( {//we are telling the app function of express to use session
-	secret: process.env.SESSION_SECRET, //we are referancing the .env file
-	resave: false, //we do not want the session to be saved
-	saveUninitialized: false //because we do not want to save an empty value in our session
+app.set('view-engine', 'ejs')
+app.use(express.urlencoded({ extended: false }))
+app.use(flash())
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
 }))
-app.use(passport.initialize())//the initialize is a method of passport
-app.use(passport.session()) //this is going to work with the app.use(session())
-//GETs
-app.get('/', (req, res) => {//setting up the routes, / is the index, req = requist, res = response
-	res.render('index.ejs', { name: 'Shevan'}) // the ./ is suffecient to locate the file within the project which will rendered
+app.use(passport.initialize())
+app.use(passport.session())
+app.use(methodOverride('_method'))
+
+app.get('/index.html', checkAuthenticated, (req, res) => {
+  res.render('index.html', { name: req.user.name })
 })
 
-app.get('/login', (req, res) => {
-	res.render('login.ejs')
+app.get('./index.html', checkNotAuthenticated, (req, res) => {
+  res.render('index.html')
 })
 
-app.get('/register', (req, res) => {
-	res.render('register.ejs')
-})
-
-//POSTS
-app.post('/login', passport.authenticate('local', { //we are using the authenticate method of passport with our local strategy
-	successRedirect: '/', //successful login go back to home
-	failureRedirect: '/login', //unsuccessful login go back to login page
-	failureFlash:true
+app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
+  successRedirect: '/',
+  failureRedirect: '/login',
+  failureFlash: true
 }))
 
-app.post('/register', async (req,res) => { //we added async for the try catch
-	try { //with try catch you need to run an async function
-		const hashedPassword = await bcrypt.hash(req.body.password, 10) //We are using bcrypt here and the 10 is a standard and it is quick, also added await because it is async function. there is another source that you can use to learn more about security.
-		users.push({
-			id: Date.now().toString(), //creating a unique id for the user, this would not be needed if I had a database.
-			name: req.body.name,
-			email: req.body.email,
-			password: hashedPassword
-		})
-		res.redirect('/login')//if the previous lines work, then the user would be redirected to the login page
-	} catch {
-		res.redirect('/register')
-	}
-	console.log(users) //in real production you would need to reset the users but in this situatuin it is saved to the memory only
+app.get('/register', checkNotAuthenticated, (req, res) => {
+  res.render('register.ejs')
 })
 
-app.listen(3000) //giving a local port to the application to run on (look up the port numbers online)
+app.post('/register', checkNotAuthenticated, async (req, res) => {
+  try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10)
+    users.push({
+      id: Date.now().toString(),
+      name: req.body.name,
+      email: req.body.email,
+      password: hashedPassword
+    })
+    res.redirect('/login')
+  } catch {
+    res.redirect('/register')
+  }
+})
 
+app.delete('/logout', (req, res) => {
+  req.logOut()
+  res.redirect('/login')
+})
 
+function checkAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next()
+  }
+
+  res.redirect('/login')
+}
+
+function checkNotAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return res.redirect('/')
+  }
+  next()
+}
+
+app.listen(3000)
