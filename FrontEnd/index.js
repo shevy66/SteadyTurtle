@@ -1,5 +1,4 @@
 // popup effect
-
 let about = document.getElementById("about");
 let themes = document.getElementById("themes");
 let achivments = document.getElementById("achivments");
