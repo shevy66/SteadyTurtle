@@ -4,11 +4,14 @@
   "description": "This is the server and the database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon ./src/app.js"
   },
   "author": "Shevan Abdulla",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongodb": "^6.6.0",
+    "nodemon": "^3.1.0"
   }
 }
