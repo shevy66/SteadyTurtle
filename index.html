@@ -13,30 +13,33 @@
 			<img src="./Images/Logo/SteadyTurtle.png" id="logo" alt="Steady Turtle Logo">
 			<div class="nav-bar">
 				<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
+				<button type="button" class="btn" onclick="openAbout()">DETAILS</button>
 				<button type="button" class="btn" onclick="openThemes()">THEMES</button>
-				<button type="button" class="btn" onclick="openAchivments()">ACHIVMENTS</button>
-				<button type="button" class="btn" onclick="openStats()">STATS</button>
-				<button type="button" class="btn" onclick="openSignIn()">SIGN IN</button>
 			</div>
 			<img src="./Images/Burger/Burger.png" id="burger-img" alt="image of a turtle from the side" onclick="openBurger()">
 			<div class="burger" id="burger">
 				<div class="burger-container">
 					<button type="button" class="btn" onclick="openAbout()">ABOUT</button>
+					<button type="button" class="btn" onclick="openDetails()">DETAILS</button>
 					<button type="button" class="btn" onclick="openThemes()">THEMES</button>
-					<button type="button" class="btn" onclick="openAchivments()">ACHIVMENTS</button>
-					<button type="button" class="btn" onclick="openStats()">STATS</button>
-					<button type="button" class="btn" onclick="openSignIn()">SIGN IN</button>
 					<button type="button" class="close-btn" onclick="closeBurger()">Close</button>
 				</div>
 			</div>
 		</header>
 		<div class="about" id="about">
+			<h2>Steady Turtle</h2>
+			<p>
+				Steady Turtle draws inspiration from the tale of the Tortoise and the Hare, where persistence and determination triumph over haste "Slow and steady wins the race." I hope you embody the spirit of the turtle—moving forward with resilience and staying on the course until you reach your goals.
+			</p>
+			<button type="button" class="close-btn" onclick="closeAbout()">Close</button>
+		</div>
+		<div class="details" id="details">
 			<a href="https://www.linkedin.com/in/shevan-abdulla-677685236/" target="_blank">
-				<img src="./images/Shevan.jpg" alt="picture of Shevan">
+				<img src="./Images/Shevan.jpg" alt="picture of Shevan">
 			</a>
 			<h2>Steady Turtle</h2>
 			<p>
-				Steady Turtle is inspired by the old Rabbit and Turtle story. The moral of the story is slow and steady wins the race. I hope that you are the turtule and this application keeps you steady on doing what you want to do and not give up untill you achive it. Click on my image to know a little bit more about me.
+				My name is Shevan. Steady Turtle is a single page application that is a spin off project based on Sernity Focus my course 2 Techwise project. The orginal project was created by a team of three students. I was responsible for the Frontend development. Through this project I cemented my Frontend skills using HTML, CSS, and JavaScript. So, I kept it framework and library free. I also wanted to practice self hosting it on my own server. I also wanted the project to be accessible to as many people as possible so no sign in is required and the information is stored during the active session. Careful to not refresh or you will lose your progress.
 			</p>
 			<button type="button" class="close-btn" onclick="closeAbout()">Close</button>
 		</div>
