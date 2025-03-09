@@ -436,7 +436,9 @@ color: var(--text_color);
 	width: 90px; 
 	height: 90px;
 	}
-
+	#pomo {
+		padding: 10px 10px 10px 30px;
+	}
 	.nav-bar {
 	display: none;
 	}
@@ -455,7 +457,8 @@ color: var(--text_color);
 	height: 70px;
 	}
 	#pomo {
-		margin-left: 25px;
+		font-size: 35px;
+		padding: 10px 10px 10px 30px;
 	}
 	.themes {
 		padding: 0px 10px;
