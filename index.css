@@ -173,7 +173,7 @@ button:hover {
 	transform: scale(1.07); 
 }
 
-.about p {
+.about p, .details p {
 	font-size: larger;
 	line-height: 1.5;
 }
@@ -427,11 +427,15 @@ color: var(--text_color);
 	.stats-rapper {
 		flex-direction: column;
 	}
-}@media (max-width: 887px) {
+}
+
+@media (max-width: 887px) {
 	.nav-bar {
 	margin-left:140px;
 	}
-}@media (max-width:701px) {
+}
+
+@media (max-width:701px) {
 	#logo {
 	width: 90px; 
 	height: 90px;
@@ -451,7 +455,9 @@ color: var(--text_color);
 	.task_container {
 	flex-direction: column;
 	}
-	}@media (max-width:375px){
+	}
+	
+	@media (max-width:375px){
 	#logo {
 	width: 70px; 
 	height: 70px;
@@ -460,8 +466,8 @@ color: var(--text_color);
 		font-size: 35px;
 		padding: 10px 10px 10px 30px;
 	}
-	.themes {
-		padding: 0px 10px;
+	.themes, .details, .about {
+		padding: 2px 20px;
 	}
 	.themes h2 {
 		margin-bottom: 0px;
@@ -470,6 +476,10 @@ color: var(--text_color);
 		margin-top: 0px;
 		margin-bottom: 5px;
 		padding: 5px;
+	}
+
+	.close-btn{
+		margin-top: 5px;
 	}
 	.circle-container {
 		width:360px;
