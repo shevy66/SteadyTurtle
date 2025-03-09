@@ -1,10 +1,7 @@
 // popup effect
 let about = document.getElementById("about");
+let details = document.getElementById("details");
 let themes = document.getElementById("themes");
-let achivments = document.getElementById("achivments");
-let stats = document.getElementById("stats");
-let signIn = document.getElementById("sign-in");
-let signUp = document.getElementById("sign-up");
 let burger = document.getElementById("burger");
 
 function openAbout() {
@@ -17,38 +14,15 @@ function openThemes() {
 	themes.classList.add("open");  
 }
 
-function openAchivments() {
+function openDetails() {
 	close();
-	achivments.classList.add("open");
-}
-
-function openStats() {
-	close();
-	stats.classList.add("open");
-}
-
-function openSignIn() {
-	close();
-	signIn.classList.add("open");  
-}
-
-function openSignUp() {
-	close();
-	signUp.classList.add("open");  
-}
-
-function openBurger() {
-	close();
-	burger.classList.add("open");  
+	details.classList.add("open");
 }
 
 function close() {
 	about.classList.remove("open");
 	themes.classList.remove("open");
-	achivments.classList.remove("open");
-	stats.classList.remove("open");
-	signIn.classList.remove("open");
-	signUp.classList.remove("open");
+	details.classList.remove("open");
 	burger.classList.remove("open");
 }
 
@@ -56,29 +30,18 @@ function closeAbout() {
 	about.classList.remove("open");
 }
 
+function closeDetails() {
+	details.classList.remove("open");
+}
+
 function closeThemes() {
 	themes.classList.remove("open");
-}
-
-function closeAchivments() {
-	achivments.classList.remove("open");
-}
-
-function closeStats() {
-	stats.classList.remove("open");
-}
-
-function closeSignIn() {
-	signIn.classList.remove("open");
-}
-
-function closeSignUp() {
-	signUp.classList.remove("open");
 }
 
 function closeBurger() {
 	burger.classList.remove("open");
 }
+
 
 //Themes
 const body = document.body;
