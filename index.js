@@ -179,7 +179,14 @@ function updateProgressRing() {
 		semicircles[0].style.display = 'none';
 		semicircles[1].style.display = 'none';
 		semicircles[2].style.display = 'none';
+
+		playSound();
 	}
+}
+
+function playSound() {
+	const audio = new Audio('./alarm.mp3');
+	audio.play();
 }
 
 function resetProgressRing() {
@@ -246,39 +253,3 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 	});
 });
-
-//Usename
-
-document.addEventListener('DOMContentLoaded', function() {
-	fetch('/api/username')
-		.then(res => res.json())
-		.then(data => {
-			const usernameBtn = document.querySelector('.api_username')
-			if (usernameBtn){
-				usernameBtn.textContent = `WELCOME ${data.username}`;
-			} else {
-				usernameBtn.textContent = `WELCOME`
-			}
-		})
-		.catch(err => console.error('Error fetching username:', err))
-})
-
-//  Fetch tasks from the backend API and display them in the frontend
-async function fetchTasks() {
-    try {
-        const response = await fetch('/api/get_tasks');
-        const tasks = await response.json();
-        const tasksContainer = document.querySelector('.all-the-tasks');
-        tasksContainer.innerHTML = '';
-        tasks.forEach(task => {
-            const taskElement = document.createElement('div');
-            taskElement.classList.add('task');
-            taskElement.textContent = task.description;
-            tasksContainer.appendChild(taskElement);
-        });
-    } catch (error) {
-        console.error('Failed to fetch tasks:', error);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', fetchTasks);
