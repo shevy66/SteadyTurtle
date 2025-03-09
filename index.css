@@ -441,7 +441,8 @@ color: var(--text_color);
 	height: 90px;
 	}
 	#pomo {
-		padding: 10px 10px 10px 30px;
+		font-size: 35px;
+		padding: 10px 10px 10px 50px;
 	}
 	.nav-bar {
 	display: none;
