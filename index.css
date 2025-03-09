@@ -395,7 +395,7 @@ justify-content: center;
 color: var(--text_color);
 }
 
-/*Screen Responsive*/
+/*Responsivnes*/
 @media (max-width: 1020px) {
 	main {
 		margin-top: 0px;
@@ -457,7 +457,7 @@ color: var(--text_color);
 	}
 	}
 	
-	@media (max-width:375px){
+@media (max-width:375px){
 	#logo {
 	width: 70px; 
 	height: 70px;
@@ -466,21 +466,7 @@ color: var(--text_color);
 		font-size: 35px;
 		padding: 10px 10px 10px 30px;
 	}
-	.themes, .details, .about {
-		padding: 2px 20px;
-	}
-	.themes h2 {
-		margin-bottom: 0px;
-	}
-	.themes button{
-		margin-top: 0px;
-		margin-bottom: 5px;
-		padding: 5px;
-	}
-
-	.close-btn{
-		margin-top: 5px;
-	}
+	
 	.circle-container {
 		width:360px;
 		height: 360px;
