@@ -19,6 +19,11 @@ function openDetails() {
 	details.classList.add("open");
 }
 
+function openBurger() {
+	close();
+	burger.classList.add("open");
+}
+
 function close() {
 	about.classList.remove("open");
 	themes.classList.remove("open");
