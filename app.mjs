@@ -16,6 +16,7 @@ const getContentType = (filePath) => {
         case '.gif': return 'image/gif';
         case '.svg': return 'image/svg+xml';
         case '.json': return 'application/json';
+				case '.mp3': return 'audio/mpeg';
         default: return 'application/octet-stream';
     }
 };
