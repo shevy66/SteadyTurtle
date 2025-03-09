@@ -466,7 +466,21 @@ color: var(--text_color);
 		font-size: 35px;
 		padding: 10px 10px 10px 30px;
 	}
-	
+
+	.about, .details {
+		width: 300px;
+		height: 300px;
+	}
+
+	.themes {
+		width: 300px;
+		height: 600px;
+	}
+
+	#close-themes {
+		margin-top: 0px;
+	}
+
 	.circle-container {
 		width:360px;
 		height: 360px;
