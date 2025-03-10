@@ -185,8 +185,7 @@ function updateProgressRing() {
 }
 
 function playSound() {
-	const audio = new Audio('./audio/alert.mp3');
-	audio.volume = 0.7;
+	const audio = new Audio('./Sounds/alarm.mp3');
 	audio.play();
 }
 
