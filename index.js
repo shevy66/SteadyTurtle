@@ -74,7 +74,7 @@ const initialTotalSeconds = 0; //fixed the one sec error
 
 function addFive() {
 	if (!paused && !countdownInterval && totalSeconds < 3600) {  // 60 minutes in seconds
-		totalSeconds += 300; // 5 minutes in seconds
+		totalSeconds += 3; // 5 minutes in seconds change this in production to 300
 		updateDisplay();
 	}
 }
@@ -185,7 +185,8 @@ function updateProgressRing() {
 }
 
 function playSound() {
-	const audio = new Audio('./alarm.mp3');
+	const audio = new Audio('./audio/alert.mp3');
+	audio.volume = 0.7;
 	audio.play();
 }
 
